@@ -30,6 +30,8 @@ class Color {
 
 int main() {
     Color red, orange, yellow, green, blue, purple, white, black;
+    
+    //Fill colors
     red.setR(255);
     red.setG(0);
     red.setB(0);
@@ -62,6 +64,7 @@ int main() {
     black.setG(0);
     black.setB(0);
 
+    //Output colors
     red.print();
     orange.print();
     yellow.print();
@@ -71,11 +74,14 @@ int main() {
     white.print();
     black.print();
 
+    //end funky text coloring
     cout << "\033[0m";
 }
 
 void Color::print() {
+    //funky text coloring
     cout << "\033[38;2;" << r << ";" << g << ";" << b << "m";
+
     cout << "R: " << r << endl;
     cout << "G: " << g << endl;
     cout << "B: " << b << endl;
